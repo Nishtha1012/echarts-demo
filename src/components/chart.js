@@ -53,6 +53,10 @@ const Chart = () => {
 
       //splits y axis into 3 lines apart from min and max
       splitNumber: 3,
+
+      axisLine: {
+        show: true,
+      },
     },
 
     //shows tooltip while hovering on points showing BMI values
