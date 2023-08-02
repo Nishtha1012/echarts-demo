@@ -8,9 +8,6 @@ import ReactEcharts from "echarts-for-react";
  * reference link for echarts:
  * https://echarts.apache.org/handbook/en/get-started
  *
- * git hub :
- * https://github.com/Nishtha1012/echarts-demo
- *
  */
 
 const Chart = () => {
@@ -130,6 +127,7 @@ const Chart = () => {
       },
     ],
   };
+  
   return (
     <>
       <p>Target weight :</p>

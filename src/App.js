@@ -1,11 +1,10 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Chart from "./components/chart";
+import Page from "./page/mainPage";
 
 function App() {
   return (
     <div className="App">
-      <Chart />
+      <Page />
     </div>
   );
 }
