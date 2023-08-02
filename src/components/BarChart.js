@@ -1,8 +1,9 @@
 import React from "react";
 import ReactEcharts from "echarts-for-react";
 import { graphic } from "echarts/dist/echarts.js";
+
 /**
- * main chart component using apache echarts
+ * bar chart component using apache echarts that represents normal , diabetic ,pre-diabetic according to given range
  * @returns  {jsx element}
  *
  * reference link for echarts:
@@ -36,8 +37,8 @@ const BarChart = () => {
       trigger: "axis",
     },
 
-    //shows the which data colours represents in bar at the bottom of graph
     visualMap: {
+      //shows which data the colours represents in bar at the bottom of graph just like legend
       show: true,
       symbol: "circle",
       bottom: 0,
@@ -48,8 +49,10 @@ const BarChart = () => {
       //to change color of bars according to given data
       pieces: [
         {
-          gt: 0,
-          lte: 4,
+          //i.e., if value is betweenn  0 to 4 green gradient will be color of the bar
+
+          gt: 0, //greater than 0
+          lte: 4, // less than or equal to 4
           label: "normal",
           color: new graphic.LinearGradient(0, 0, 0, 1, [
             {
@@ -62,6 +65,7 @@ const BarChart = () => {
             },
           ]),
         },
+        // if value is betweenn  4 to 8 yellows gradient will be color of the bar
         {
           gt: 4,
           lte: 8,
@@ -115,7 +119,7 @@ const BarChart = () => {
       {
         data: [11, 9, 5, 4, 3, 2, 1],
         type: "bar",
-        zlevel: 100,
+        zlevel: 100, //z index of graph
 
         //to change colours of x axis according to given value
         markLine: {
@@ -125,6 +129,7 @@ const BarChart = () => {
           symbol: "none",
 
           data: [
+            // x axis will be of green colored where value is 4
             {
               name: "normal",
               yAxis: `4`,
@@ -133,6 +138,7 @@ const BarChart = () => {
                 color: "green",
               },
             },
+            // x axis will be of yellow colored where value is 8
             {
               name: "pre-diabetic",
               yAxis: `8`,
@@ -141,6 +147,7 @@ const BarChart = () => {
                 color: "yellow",
               },
             },
+            // x axis will be of orange colored where value is 10
             {
               name: "diabetic",
               yAxis: `10`,
@@ -149,6 +156,7 @@ const BarChart = () => {
                 color: "orange",
               },
             },
+            // x axis will be of red colored where value is 12
             {
               name: "high-diabetic",
               yAxis: `12`,

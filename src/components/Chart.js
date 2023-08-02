@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactEcharts from "echarts-for-react";
 
 /**
- * main chart component using apache echarts
+ * line chart component using apache echarts
  * @returns  {jsx element}
  *
  * reference link for echarts:
@@ -127,7 +127,7 @@ const Chart = () => {
       },
     ],
   };
-  
+
   return (
     <>
       <p>Target weight :</p>

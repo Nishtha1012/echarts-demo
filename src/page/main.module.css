@@ -1,0 +1,11 @@
+.active {
+  border: none;
+  outline: none;
+  background: white;
+  text-decoration: underline;
+}
+.inactive {
+  border: none;
+  outline: none;
+  background: white;
+}
